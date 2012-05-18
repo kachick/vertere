@@ -4,8 +4,7 @@ History.rdoc
 Manifest.txt
 Rakefile
 example.rb
-lib/vertere/core.rb
-lib/vertere/ext.rb
 lib/vertere.rb
+lib/vertere/ext.rb
 test/test_helper.rb
 test/test_vertere.rb
