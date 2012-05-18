@@ -1,66 +1,60 @@
 = vertere
 
-* http://github.com/kachick/vertere
-* https://rubygems.org/gems/vertere
-* http://rubyforge.org/projects/vertere
+code :: http://github.com/kachick/vertere
+gem  :: http://rubygems.org/gems/vertere
 
-== DESCRIPTION
+== Description
 
-wrapper for inverted comparisons
+Provide a wrapper class for inverted comparisons
 
-== FEATURES
-* easy get objects for inverted comparisons
+== Features
 
-== SYNOPSIS
+Wrap below methods
 
-* setup
+* #==
+* #===
+* #=~
+* #<=>
+
+== Usage
+
+* Setup
+
     require 'vertere'
 
-* an approach for [ruby-talk:392128]
-    # http://www.ruby-forum.com/topic/3418285
+* An approaching to invert comparisons  # from [ruby-talk:392128]
 
-    NUMBER_CHARS=('0'..'11').map(&:freeze).freeze
-    #=> ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
+    NUMBER_CHARS = ["0", "1", "9", "10", "11"]
+    NUMBER_CHARS.grep(/0/)                  #=> ["0", "10"]
+    NUMBER_CHARS.grep(Veretere.invert(/0/)) #=> ["1", "9", "11"]
+    
+* Extend Ruby's interface
 
-    NUMBER_CHARS.grep(/0/)
-    #=> ["0", "10"]
+    require 'vertere/ext'
 
-    NUMBER_CHARS.grep(/0/.for_!)
-    #=> ["1", "2", "3", "4", "5", "6", "7", "8", "9", "11"]
+    NUMBER_CHARS.grep(/0/.for_!)            #=> ["1", "9", "11"]
 
-* and more
-    NUMBER_CHARS.sort_by{|s|s.to_i.for_!}
-    #=> ["11", "10", "9", "8", "7", "6", "5", "4", "3", "2", "1", "0"]
+* And more
 
-== REQUIREMENTS
+    NUMBER_CHARS.sort_by{|s|s.to_i.for_!}  #=> ["11", "10", "9", "1", "0"]
 
-* Ruby 1.9.2 and later (tested 1.9.2, 1.9.3)
+== Requirements
 
-== INSTALL
+* Ruby 1.9.2 or later
+  
+  Focusing
+  
+  * 1.9.3-p194
+  * 1.9.2-p290
 
-* sudo gem install vertere
+== Installation
 
-== LICENSE
+* gem install vertere
 
-(The MIT License)
+== License
 
-Copyright (c) 2012  Kenichi Kamiya
+The MIT X11 License
 
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
+Copyright (c) 2012 Kenichi Kamiya
 
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+See the file LICENSE for further details.

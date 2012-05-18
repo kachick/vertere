@@ -1,11 +1,12 @@
 $VERBOSE = true
-require File.dirname(__FILE__) + '/test_helper.rb'
+require_relative 'test_helper'
 
 class TestVertere < Test::Unit::TestCase
-  NUMBER_CHARS=('0'..'11').map(&:freeze).freeze
+  NUMBER_CHARS = ('0'..'11').map(&:freeze).freeze
   
   def test_compare
     assert_equal(["0", "10"], NUMBER_CHARS.grep(/0/))
+    assert_equal((NUMBER_CHARS - ["0", "10"]), NUMBER_CHARS.grep(Vertere.invert(/0/)))
     assert_equal((NUMBER_CHARS - ["0", "10"]), NUMBER_CHARS.grep(/0/.for_!))
     assert_equal(false, (/0/.for_! =~ '0'))
     assert_equal(["0", "10"], NUMBER_CHARS.grep(/0/)) # check not bloken
