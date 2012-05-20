@@ -5,7 +5,7 @@ gem  :: http://rubygems.org/gems/vertere
 
 == Description
 
-Provide a wrapper class for inverted comparisons
+Provide a way of get wrapper objects for inverted comparisons
 
 == Features
 
