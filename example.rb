@@ -2,18 +2,14 @@
 
 require_relative 'lib/vertere'
 
-# An approach for [ruby-talk:392128]
-#  http://www.ruby-forum.com/topic/3418285
-
-NUMBER_CHARS = ('0'..'11').map(&:freeze).freeze
-p NUMBER_CHARS
-p NUMBER_CHARS.grep(/0/)
-p(/0/ =~ '0')
+num_chars = ["0", "1", "9", "10", "11"].freeze
+p num_chars.grep(/0/)                #=> ["0", "10"]
+p(/0/ =~ '0')                        #=> 0
 
 require_relative 'lib/vertere/ext'
 
-p NUMBER_CHARS.grep(/0/.for_!)
-p(/0/.for_! =~ '0')
-p NUMBER_CHARS.grep(/0/)
-p NUMBER_CHARS.sort_by(&:to_i)
-p NUMBER_CHARS.sort_by{|s|s.to_i.for_!}
+p num_chars.grep(/0/.for_!) #=> ["1", "9", "11"]
+p(/0/.for_! =~ '0')                  #=> false
+p num_chars.grep(/0/)                #=> ["0", "10"]
+p num_chars.sort_by(&:to_i)          #=> ["0", "1", "9", "10", "11"]
+p num_chars.sort_by{|s|s.to_i.for_!} #=> ["11", "10", "9", "1", "0"]

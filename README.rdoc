@@ -24,19 +24,19 @@ Wrap below methods
 
 * An approaching to invert comparisons  # from [ruby-talk:392128]
 
-    NUMBER_CHARS = ["0", "1", "9", "10", "11"]
-    NUMBER_CHARS.grep(/0/)                  #=> ["0", "10"]
-    NUMBER_CHARS.grep(Veretere.invert(/0/)) #=> ["1", "9", "11"]
+    num_chars = ["0", "1", "9", "10", "11"]
+    num_chars.grep(/0/)                  #=> ["0", "10"]
+    num_chars.grep(Veretere.invert(/0/)) #=> ["1", "9", "11"]
     
 * Extend Ruby's interface
 
     require 'vertere/ext'
 
-    NUMBER_CHARS.grep(/0/.for_!)            #=> ["1", "9", "11"]
+    num_chars.grep(/0/.for_!)            #=> ["1", "9", "11"]
 
 * And more
 
-    NUMBER_CHARS.sort_by{|s|s.to_i.for_!}  #=> ["11", "10", "9", "1", "0"]
+    num_chars.sort_by{|s|s.to_i.for_!}   #=> ["11", "10", "9", "1", "0"]
 
 == Requirements
 
