@@ -1,8 +1,10 @@
 = vertere
 
+{<img src="https://secure.travis-ci.org/kachick/vertere.png" />}[http://travis-ci.org/kachick/vertere]
+
 == Description
 
-Provide a way to get wrapper objects for inverted comparisons
+Provide a way of getting wrapper objects for inverted comparisons.
 
 == Features
 
@@ -19,7 +21,7 @@ Wrap below methods
 
     require 'vertere'
 
-* An approaching to invert comparisons  # from [ruby-talk:392128]
+* An approaching to invert comparisons
 
     num_chars = %w[0 1 9 10 11]
     num_chars.grep(/0/)                  #=> ["0", "10"]
@@ -42,6 +44,14 @@ Wrap below methods
 == Installation
 
     gem install vertere
+    
+== Links
+
+code   :: https://github.com/kachick/vertere
+issues :: https://github.com/kachick/vertere/issues
+CI     :: http://travis-ci.org/#!/kachick/vertere
+gem    :: https://rubygems.org/gems/vertere
+gem+   :: http://metagem.info/gems/vertere
 
 == License
 
