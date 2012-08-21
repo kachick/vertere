@@ -3,9 +3,12 @@ LICENSE
 History.rdoc
 Manifest.txt
 Rakefile
-example.rb
+Gemfile
+vertere.gemspec
 lib/vertere.rb
 lib/vertere/version.rb
+lib/vertere/objectextension.rb
 lib/vertere/ext.rb
 test/test_helper.rb
 test/test_vertere.rb
+examples/README.rb
