@@ -2,6 +2,7 @@
 
 require 'delegate'
 require_relative 'vertere/version'
+require_relative 'vertere/objectextension'
 
 module Vertere
 
