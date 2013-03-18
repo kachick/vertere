@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>vertere by kachick</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>vertere</h1>
+        <h2>Get wrapper for inverted comparisons.</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/kachick/vertere/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/kachick/vertere/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/kachick/vertere" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>vertere</h1>
+
+<p><a href="http://travis-ci.org/kachick/vertere"><img src="https://secure.travis-ci.org/kachick/vertere.png" alt="Build Status"></a>
+<a href="http://badge.fury.io/rb/vertere"><img src="https://badge.fury.io/rb/vertere.png" alt="Gem Version"></a></p>
+
+<h2>Description</h2>
+
+<p>Get wrapper for inverted comparisons.</p>
+
+<h2>Features</h2>
+
+<h3>Wraps</h3>
+
+<ul>
+<li>#==</li>
+<li>#===</li>
+<li>#=~</li>
+<li>#&lt;=&gt;</li>
+</ul><h2>Usage</h2>
+
+<div class="highlight"><pre><span class="nb">require</span> <span class="s1">'vertere'</span>
+
+<span class="c1"># An approaching to invert comparisons</span>
+<span class="n">num_chars</span> <span class="o">=</span> <span class="sx">%w[0 1 9 10 11]</span>
+<span class="n">num_chars</span><span class="o">.</span><span class="n">grep</span><span class="p">(</span><span class="sr">/0/</span><span class="p">)</span>                  <span class="c1">#=&gt; ["0", "10"]</span>
+<span class="n">num_chars</span><span class="o">.</span><span class="n">grep</span><span class="p">(</span><span class="no">Veretere</span><span class="o">.</span><span class="n">invert</span><span class="p">(</span><span class="sr">/0/</span><span class="p">))</span> <span class="c1">#=&gt; ["1", "9", "11"]</span>
+
+<span class="c1"># Extend core classies</span>
+<span class="nb">require</span> <span class="s1">'vertere/core_ext'</span>
+<span class="n">num_chars</span><span class="o">.</span><span class="n">grep</span><span class="p">(</span><span class="sr">/0/</span><span class="o">.</span><span class="n">for_!</span><span class="p">)</span>            <span class="c1">#=&gt; ["1", "9", "11"]</span>
+
+<span class="c1"># And more</span>
+<span class="n">num_chars</span><span class="o">.</span><span class="n">sort_by</span><span class="p">{</span><span class="o">|</span><span class="n">s</span><span class="o">|</span><span class="n">s</span><span class="o">.</span><span class="n">to_i</span><span class="o">.</span><span class="n">for_!</span><span class="p">}</span>   <span class="c1">#=&gt; ["11", "10", "9", "1", "0"]</span>
+</pre></div>
+
+<h2>Requirements</h2>
+
+<ul>
+<li><a href="http://travis-ci.org/#!/kachick/vertere">Ruby 1.9.2 or later</a></li>
+</ul><h2>Install</h2>
+
+<div class="highlight"><pre><span class="nv">$ </span>gem install vertere
+</pre></div>
+
+<h2>Link</h2>
+
+<ul>
+<li><a href="http://kachick.github.com/vertere/">Home</a></li>
+<li><a href="https://github.com/kachick/vertere">code</a></li>
+<li><a href="http://kachick.github.com/vertere/yard/frames.html">API</a></li>
+<li><a href="https://github.com/kachick/vertere/issues">issues</a></li>
+<li><a href="http://travis-ci.org/#!/kachick/vertere">CI</a></li>
+<li><a href="https://rubygems.org/gems/vertere">gem</a></li>
+</ul><h2>License</h2>
+
+<p>The MIT X11 License<br>
+Copyright (c) 2012 Kenichi Kamiya<br>
+See MIT-LICENSE for further details.</p>
+      </section>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-39408805-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
