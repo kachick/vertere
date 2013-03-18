@@ -31,7 +31,7 @@ num_chars.grep(/0/)                  #=> ["0", "10"]
 num_chars.grep(Veretere.invert(/0/)) #=> ["1", "9", "11"]
     
 # Extend core classies
-require 'vertere/ext'
+require 'vertere/core_ext'
 num_chars.grep(/0/.for_!)            #=> ["1", "9", "11"]
 
 # And more

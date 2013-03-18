@@ -8,7 +8,7 @@ num_chars = %w[0 1 9 10 11].freeze
 p num_chars.grep(/0/)                #=> ["0", "10"]
 p(/0/ =~ '0')                        #=> 0
 
-require_relative '../lib/vertere/ext'
+require_relative '../lib/vertere/core_ext'
 
 p num_chars.grep(/0/.for_!) #=> ["1", "9", "11"]
 p(/0/.for_! =~ '0')                  #=> false
