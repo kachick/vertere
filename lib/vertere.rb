@@ -7,7 +7,8 @@ require_relative 'vertere/objectextension'
 module Vertere
 
   class << self
-    
+
+    # @return [SimpleDelegator]
     def for_object(original)
       SimpleDelegator.new(original).tap {|wrapper|
         wrapper.singleton_class.class_eval do
@@ -32,7 +33,7 @@ module Vertere
         end
       }
     end
-    
+
     alias_method :invert, :for_object
 
   end

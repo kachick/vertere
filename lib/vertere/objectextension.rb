@@ -2,6 +2,7 @@ module Vertere
 
   module ObjectExtension
 
+    # @return [SimpleDelegator]
     def for_vertere
       ::Vertere.for_object self
     end
