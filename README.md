@@ -41,7 +41,7 @@ num_chars.sort_by{|s|s.to_i.for_!}   #=> ["11", "10", "9", "1", "0"]
 Requirements
 -------------
 
-* [Ruby 1.9.2 or later](http://travis-ci.org/#!/kachick/vertere)
+* [Ruby 1.9.3 or later](http://travis-ci.org/#!/kachick/vertere)
 
 Install
 -------
