@@ -3,6 +3,7 @@ vertere
 
 [![Build Status](https://secure.travis-ci.org/kachick/vertere.png)](http://travis-ci.org/kachick/vertere)
 [![Gem Version](https://badge.fury.io/rb/vertere.png)](http://badge.fury.io/rb/vertere)
+[![Dependency Status](https://gemnasium.com/kachick/vertere.svg)](https://gemnasium.com/kachick/vertere)
 
 Description
 -----------
@@ -38,6 +39,8 @@ num_chars.grep(/0/.for_!)            #=> ["1", "9", "11"]
 num_chars.sort_by{|s|s.to_i.for_!}   #=> ["11", "10", "9", "1", "0"]
 ```
 
+But I suggest [Enumerable#grep_v from Ruby 2.3](https://bugs.ruby-lang.org/issues/11049) :).
+
 Requirements
 -------------
 
@@ -55,7 +58,7 @@ Link
 
 * [Home](http://kachick.github.com/vertere/)
 * [code](https://github.com/kachick/vertere)
-* [API](http://kachick.github.com/vertere/yard/frames.html)
+* [API](http://www.rubydoc.info/github/kachick/vertere)
 * [issues](https://github.com/kachick/vertere/issues)
 * [CI](http://travis-ci.org/#!/kachick/vertere)
 * [gem](https://rubygems.org/gems/vertere)
