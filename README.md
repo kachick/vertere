@@ -44,7 +44,7 @@ But I suggest [Enumerable#grep_v from Ruby 2.3](https://bugs.ruby-lang.org/issue
 Requirements
 -------------
 
-* [Ruby 1.9.3 or later](http://travis-ci.org/#!/kachick/vertere)
+* [Ruby 2.5 or later](http://travis-ci.org/#!/kachick/vertere)
 
 Install
 -------
