@@ -3,7 +3,6 @@ vertere
 
 [![Build Status](https://secure.travis-ci.org/kachick/vertere.png)](http://travis-ci.org/kachick/vertere)
 [![Gem Version](https://badge.fury.io/rb/vertere.png)](http://badge.fury.io/rb/vertere)
-[![Dependency Status](https://gemnasium.com/kachick/vertere.svg)](https://gemnasium.com/kachick/vertere)
 
 Description
 -----------
