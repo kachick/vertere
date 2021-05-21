@@ -1,8 +1,9 @@
 vertere
 =============
 
-[![Build Status](https://secure.travis-ci.org/kachick/vertere.png)](http://travis-ci.org/kachick/vertere)
-[![Gem Version](https://badge.fury.io/rb/vertere.png)](http://badge.fury.io/rb/vertere)
+* ***This repository is archived***
+* ***No longer maintained***
+* ***All versions have been yanked from https://rubygems.org/ for releasing valuable namespace for others***
 
 Description
 -----------
@@ -44,23 +45,6 @@ Requirements
 -------------
 
 * [Ruby 2.5 or later](http://travis-ci.org/#!/kachick/vertere)
-
-Install
--------
-
-```bash
-$ gem install vertere
-```
-
-Link
-----
-
-* [Home](http://kachick.github.com/vertere/)
-* [code](https://github.com/kachick/vertere)
-* [API](http://www.rubydoc.info/github/kachick/vertere)
-* [issues](https://github.com/kachick/vertere/issues)
-* [CI](http://travis-ci.org/#!/kachick/vertere)
-* [gem](https://rubygems.org/gems/vertere)
 
 License
 --------
